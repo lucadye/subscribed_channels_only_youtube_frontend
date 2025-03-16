@@ -12,15 +12,26 @@
   text-align: center;
 }
 
-.search-container #searchInput {
+.search-container .search-bar {
   border: 1px solid #E0E0E0;
   border-radius: 10px;
   outline: none;
   background: none;
   color: #E0E0E0;
-  font-size: 24px;
   padding: 5px;
   width: 80%;
+  background-color: #FFFFFF;
+  margin: 0 auto;
+}
+
+.search-container #searchInput {
+  border: none;
+  outline: none;
+  width: calc(100% - 2rem - 6rem);
+  height: 2rem;
+  display: inline;
+  font-size: 24px;
+  background-color: unset;
 }
 
 .search-container .buttons a {
@@ -29,6 +40,14 @@
   margin: 1%;
   padding-left: 5px;
   padding-right: 5px;
+}
+
+.search-container button {
+  width: 2rem;
+  height: 2rem;
+  vertical-align: -0.125rem;
+  border: none;
+  background-color: unset;
 }
 
 ::placeholder {

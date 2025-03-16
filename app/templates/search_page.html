@@ -13,10 +13,10 @@
 
 <div class="search-container">
   <h1 class="title">search</h1>
-  <input type="text" id="searchInput" autofocus placeholder="search..">
-
-  <button id="searchButton">Search</button>
-
+  <div class="search-bar">
+    <input type="text" id="searchInput" autofocus placeholder="search..">
+    <button id="searchButton"><img src="{{ url_for('static', filename='images/search_icon.svg') }}"></button>
+  </div>
  <div class="buttons">
     <a href="">home</a>
   </div>
