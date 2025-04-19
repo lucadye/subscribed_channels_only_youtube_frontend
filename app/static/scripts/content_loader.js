@@ -2,6 +2,7 @@ function createVideoElement(videoData) {
     function createThumbnailContainer() {
         const thumbnailContainer = document.createElement('a');
         thumbnailContainer.href = videoData.video_url;
+        thumbnailContainer.className = 'thumbnail-container';
 
         const thumbnailImg = document.createElement('img');
         thumbnailImg.src = videoData.thumbnail;
@@ -55,7 +56,9 @@ function createVideoElement(videoData) {
 
     function createDescriptionElement() {
         const description = document.createElement('p');
+        description.className = 'read-more'
         description.textContent = videoData.description;
+        handleReadMore(description, 100);
         return description;
     }
 

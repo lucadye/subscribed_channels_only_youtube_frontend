@@ -1,16 +1,13 @@
-const characterMax = 200;
-
 const ellipsisString = '... ';
 const showMore = 'Show more';
 const showLess = 'Show less';
 
 
-function handleReadMore() {
-    const root = document.getElementsByClassName('read-more')[0];
+function handleReadMore(root, characterMax) {
     const description = root.innerHTML.trim().split(' ');
     root.innerHTML = '';
 
-    const { visibleText, invisibleText } = truncateText(description);
+    const { visibleText, invisibleText } = truncateText(description, characterMax);
     if (invisibleText.trim() === '') {
         root.innerHTML = visibleText;
     } else {
@@ -18,7 +15,7 @@ function handleReadMore() {
     }
 }
 
-function truncateText(description) {
+function truncateText(description, characterMax) {
     let charCount = 0;
     let visibleText = '';
     let invisibleText = ' ';
@@ -75,4 +72,4 @@ function toggleVisibility(hidden, invisible, ellipsis, button) {
 }
 
 
-handleReadMore();
+handleReadMore(document.getElementsByClassName('read-more')[0], 200);
